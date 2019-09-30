@@ -15,8 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
 Route::get('/personnages', 'PersonnageController@index');
-=======
-Route::get('/creation', 'PersonnageController@create');
->>>>>>> cf9698bce91728bf967add8f05cf163a4f21b85b
