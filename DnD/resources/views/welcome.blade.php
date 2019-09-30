@@ -10,8 +10,9 @@
 
     </head>
     <body>
-        <div class="test">
-            Bonjour le peuple 111111111111111111
-        </div>
+    <div class="container">
+    @include('layout.header')
+            <h1>Personnages</h1>
+    </div>
     </body>
 </html>
