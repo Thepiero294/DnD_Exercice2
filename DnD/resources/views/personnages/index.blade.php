@@ -1,13 +1,18 @@
-@extends('layout.master')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-<div class="title m-b-md">
-    <ul>
-        @foreach ($personnages as $personnage)
-            <li>
-                <a href="{{ route('taches.show', $tache->id) }}"> {{ $personnage->nom }}</a>
-            </li>
-        @endforeach
-    </ul>
-</div>
-@endsection
+        <link href="/css/app.css" rel="stylesheet">
+
+        <title>Laravel</title>
+
+    </head>
+    <body>
+    <div class="container">
+    @include('layout.header')
+            <h1>Personnages</h1>
+    </div>
+    </body>
+</html>

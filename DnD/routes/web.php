@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PersonnageController@index');
 
 Route::get('/personnages', 'PersonnageController@index');
+Route::get('/personnages/creer', 'PersonnageController@create');

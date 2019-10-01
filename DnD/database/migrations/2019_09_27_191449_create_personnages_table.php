@@ -14,7 +14,7 @@ class CreatePersonnagesTable extends Migration
     public function up()
     {
         Schema::create('personnages', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unsigned()->unique();
             $table->string('nom',100);
             $table->integer('force');
             $table->integer('dexterite');

@@ -24,7 +24,7 @@ class PersonnageController extends Controller
      */
     public function create()
     {
-        //
+        return view('personnages.create');
     }
 
     /**
