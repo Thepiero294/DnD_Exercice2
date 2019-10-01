@@ -1,58 +1,46 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.master')
 
-        <link href="/css/app.css" rel="stylesheet">
+@section('content')
+  <div class="container">
+      <h1>Création d'un personnage</h1>
 
-        <title>Laravel</title>
-
-    </head>
-    <body>
-    <div class="container">
-    @include('layout.header')
-            <h1>Création d'un personnage</h1>
-
-            <form>
- 
-  <div class="form-group">
-    <label for="inputAddress">Nom</label>
-    <input type="text" class="form-control" placeholder="1234 Main St">
+        <form action="{{ route('personnages.store') }}" method="post">
+          {{ csrf_field() }}
+          
+          @include('layout.errors')
+          <div class="form-group">
+            <label for="inputNom">Nom</label>
+            <input type="text" name="nomPersonnage" class="form-control" placeholder="Nom du personnage">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-4">
+              <label for="inputForce">Force</label>
+              <input type="text" name="forcePersonnage" class="form-control"  placeholder="Force">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputDexterite">Dextérité</label>
+              <input type="text" name="dexteritePersonnage" class="form-control"placeholder="Dextérité">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputConstitution">Constitution</label>
+              <input type="text" name="constitutionPersonnage" class="form-control" placeholder="Constitution">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputIntelligence">Intelligence</label>
+              <input type="text" name="intelligencePersonnage" class="form-control" placeholder="Intelligence">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputSagesse">Sagesse</label>
+              <input type="text" name="sagessePersonnage" class="form-control" placeholder="Sagesse">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputCharisme">Charisme</label>
+                <input type="text" name="charismePersonnage" class="form-control"  placeholder="Charisme">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </form>
   </div>
-  <div class="form-row">
-    <div class="form-group col-sm-4">
-      <label for="inputEmail4">Force</label>
-      <input type="email" class="form-control"  placeholder="Email">
-    </div>
-    <div class="form-group col-sm-4">
-      <label for="inputPassword4">Dextérité</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group col-sm-4">
-      <label for="inputPassword4">Constitution</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group col-md-4">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-    </div>
-    </body>
-</html>
+@endsection

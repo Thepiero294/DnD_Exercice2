@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.master')
 
-        <link href="/css/app.css" rel="stylesheet">
-
+@section('content')
         <title>Laravel</title>
-
-    </head>
-    <body>
     <div class="container">
-    @include('layout.header')
-            <h1>Personnages</h1>
+        <h1>Personnages</h1>
+        <ul>
+            @foreach ($personnages as $personnage) 
+                <li>
+                    <a href="{{ route('personnages.show', $personnages->id) }}}"> {{ $personnage->nom }} </a>
+                </li>
+            @endforeach
+        </ul>
     </div>
-    </body>
-</html>
+@endsection

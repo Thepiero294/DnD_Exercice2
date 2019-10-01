@@ -15,3 +15,5 @@ Route::get('/', 'PersonnageController@index');
 
 Route::get('/personnages', 'PersonnageController@index');
 Route::get('/personnages/creer', 'PersonnageController@create');
+Route::get('/personnages/{personnage}', 'PersonnageController@show')->name('personnages.show');
+Route::post('/personnages', 'PersonnageController@store')->name('personnages.store');
