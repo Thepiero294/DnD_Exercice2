@@ -14,7 +14,8 @@ class PersonnageController extends Controller
      */
     public function index()
     {
-        return view('personnages.index', ['personnages' => Personnage::all()]);
+        $personnages = Personnage::personnageExistant();
+        return view('personnages.index', ['personnages' => $personnages]);
     }
 
     /**
@@ -24,7 +25,7 @@ class PersonnageController extends Controller
      */
     public function create()
     {
-        //
+        return view('personnages.create');
     }
 
     /**
@@ -35,7 +36,27 @@ class PersonnageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(request(),
+            ['nomPersonnage' => 'required|min:5|max:100'],
+            ['forcePersonnage' => 'required|numeric|min:3|max:18'],
+            ['dexteritePersonnage' => 'required|numeric|min:3|max:18'],
+            ['constitutionPersonnage' => 'required|numeric|min:3|max:18'],
+            ['intelligencePersonnage' => 'required|numeric|min:3|max:18'],
+            ['sagessePersonnage' => 'required|numeric|min:3|max:18'],
+            ['charismePersonnage' => 'required|numeric|min:3|max:18']
+        );
+
+        Personnage::create([
+            'nom' => request('nomPersonnage'),
+            'force' => request('forcePersonnage'),
+            'dexterite' => request('dexteritePersonnage'),
+            'constitution' => request('constitutionPersonnage'),
+            'intelligence' => request('intelligencePersonnage'),
+            'sagesse' => request('sagessePersonnage'),
+            'charisme' => request('charismePersonnage')
+        ]);
+        return redirect('/personnages');
+
     }
 
     /**
@@ -44,9 +65,9 @@ class PersonnageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Personnage $personnage)
     {
-        //
+        return view('personnages.show', ['personnage' => $personnage]);
     }
 
     /**

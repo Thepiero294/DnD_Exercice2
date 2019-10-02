@@ -15,6 +15,8 @@ class CreateEquipementsTable extends Migration
     {
         Schema::create('equipements', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('personnage_id')->unsigned();
+            $table->foreign('personnage_id')->references('id')->on('personnages')->onUpdate('cascade')->onDelete('cascade');
             $table->string('nom_equipement', 100);
             $table->timestamps();
         });
