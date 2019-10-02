@@ -9,8 +9,8 @@
       </li>
     </ul>
     </div>
-    <span class="navbar-text">
+    <span class="navbar-text titre">
       Pier-Olivier Fontaine et Marc-Antoine Fournier
     </span>
-  
+
 </nav>

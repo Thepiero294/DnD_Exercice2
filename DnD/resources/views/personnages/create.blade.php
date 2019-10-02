@@ -2,11 +2,11 @@
 
 @section('content')
   <div class="container">
-      <h1>Création d'un personnage</h1>
+      <h1 class="titre">Création d'un personnage</h1>
 
         <form action="{{ route('personnages.store') }}" method="post">
           {{ csrf_field() }}
-          
+
           @include('layout.errors')
           <div class="form-group">
             <label for="inputNom">Nom</label>

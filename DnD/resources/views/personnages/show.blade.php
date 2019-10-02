@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <h1>Personnages</h1>
-                <br>
-                {{$personnage->nom}}
+        <h1 class="titre">Personnages</h1>
+        <br>
+        {{ $personnage->nom }}
     </div>
 @endsection

@@ -6,7 +6,7 @@
 
         <link href="/css/app.css" rel="stylesheet">
 
-        <title>Laravel</title>
+        <title>{{ __('layout.title') }}</title>
 
     </head>
     <body>

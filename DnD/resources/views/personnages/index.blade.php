@@ -3,11 +3,13 @@
 @section('content')
         <title>Laravel</title>
     <div class="container">
-        <h1>Personnages</h1>
+        <h1 class="titre">Personnages</h1>
         <ul>
-            @foreach ($personnages as $personnage) 
+            @foreach ($personnages as $personnage)
                 <li>
-                    <a href="{{ route('personnages.show', $personnages->id) }}}"> {{ $personnage->nom }} </a>
+                    <a class="nomPerso" href="{{ route('personnages.show', $personnage->id) }}}">
+                        {{ $personnage->nom }}
+                        ( {{ $personnage->created_at->toFormattedDateString() }} )  </a>
                 </li>
             @endforeach
         </ul>
