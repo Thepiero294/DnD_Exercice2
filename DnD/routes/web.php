@@ -19,4 +19,4 @@ Route::get('/personnages/editer/{personnage}', 'PersonnageController@show')->nam
 Route::post('/personnages', 'PersonnageController@store')->name('personnages.store');
 
 // Pour ajout d'un équipement à un personnage
-Route::post(':/personnages/update/{personnage}', 'PersonnageController@update')->name('personnages.update');
+Route::post('/personnages/update/{personnage}', 'PersonnageController@update')->name('personnages.update');

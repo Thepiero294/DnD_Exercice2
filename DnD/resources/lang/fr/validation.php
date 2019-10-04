@@ -6,7 +6,7 @@ return [
         'string' => 'Le champ :attribute doit avoir un minimum de :min caractères.',
     ],
     'max' => [
-        'string' => 'Le champ :attribute ne peu pas être plus grand que :max characters.',
+        'string' => 'Le champ :attribute ne peut pas être plus grand que :max charactères.',
     ],
     'between' => [
         'numeric' => 'Le champ :attribute doit être entre :min et :max.',

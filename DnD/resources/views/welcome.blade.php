@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -15,4 +15,4 @@
             <h1>Personnages</h1>
     </div>
     </body>
-</html>
+</html> -->

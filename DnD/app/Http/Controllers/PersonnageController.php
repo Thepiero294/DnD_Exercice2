@@ -68,7 +68,8 @@ class PersonnageController extends Controller
      */
     public function show(Personnage $personnage)
     {
-        return view('personnages.show', ['personnage' => $personnage]);
+        $equipements = Equipement::where('personnage_id', "=", $personnage->id)->get();
+        return view('personnages.show', ['personnage' => $personnage, 'equipements' => $equipements]);
     }
 
     /**
@@ -89,17 +90,17 @@ class PersonnageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         $this->validate(request(),[
-            'nomEquipement' => 'required|min:5|max:100',
+            'nomEquipement' => 'required|min:5|max:100'
         ]);
+        $equipement = new Equipement();
+        $equipement->nom_equipement = request("nomEquipement");
+        $equipement->personnage_id = $id;
 
-        Equipement::create([
-            'nom_equipement' => request('nomEquipement'),
-            'personnage_id' => request($id)
-        ]);
-        return redirect('/personnages');
+        $equipement->save();
+        return redirect()->route("personnages.show", $id);
     }
 
     /**

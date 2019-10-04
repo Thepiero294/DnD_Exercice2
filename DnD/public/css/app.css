@@ -5400,8 +5400,8 @@ a.badge-dark.focus {
 
 .alert-danger {
   color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
+  background-color: red;
+  border-color: darkred;
 }
 
 .alert-danger hr {
@@ -10664,7 +10664,19 @@ body {
   color: white;
 }
 
+.nav-link:hover {
+  text-decoration: underline;
+}
+
 li {
   color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+h1 {
+  color: red;
 }
 

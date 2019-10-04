@@ -8,7 +8,7 @@ class Equipement extends Model
 {
     protected $fillable = ['nom'];
 
-    static public function equipement()
+    static public function equipements()
     {
         return static::all();
     }

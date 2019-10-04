@@ -5,7 +5,7 @@
         <a class="nav-link" href="/">Accueil </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="personnages/creer">Création de personnages</a>
+        <a class="nav-link" href="/personnages/creer">Création de personnages</a>
       </li>
     </ul>
     </div>

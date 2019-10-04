@@ -40,7 +40,7 @@
                 <input type="text" name="charismePerso" class="form-control" value="{{ old('charismePerso') }}"   placeholder="Charisme">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">{{ __('layout.bouttonSave') }}</button>
+          <button type="submit" class="btn btn-primary">{{ __('layout.boutonSave') }}</button>
         </form>
   </div>
 @endsection

@@ -36,7 +36,7 @@
         <br>
 
         <h2 class="titre">{{ __('layout.titreEquipement') }}</h2>
-        <form action="{{ route('personnages.update', $personnage) }}" method="POST">
+        <form action="{{ route('personnages.update', $personnage->id) }}" method="POST">
             {{ csrf_field() }}
 
             @include('layout.errors')
@@ -45,7 +45,13 @@
                 <label class="titre" for="nomEquipement">{{ __('layout.nomEquipement') }}</label>
                 <input type="text" name="nomEquipement" class="form-control" value="{{ old('nomEquipement') }}" placeholder="Nom de l'équipement">
             </div>
-            <button type="submit" class="btn btn-primary">{{ __('layout.bouttonSave') }}</button>
+            <button type="submit" class="btn btn-primary">{{ __('layout.boutonSave') }}</button>
         </form>
+
+        @foreach ($equipements as $equipement)
+                <li>
+                        {{ $equipement->nom_equipement }}
+                </li>
+            @endforeach
     </div>
 @endsection
