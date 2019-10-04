@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Equipement extends Model
 {
+    protected $fillable = ['nom'];
 
     /** Retourne tous les équipements */
     static public function equipements()

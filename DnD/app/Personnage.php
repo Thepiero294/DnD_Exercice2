@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Personnage extends Model
 {
+    protected $fillable = ['nom', 'force', 'dexterite', 'constitution', 'intelligence', 'sagesse', 'charisme'];
     /** Retourne la liste des personnages existants */
     static public function personnageExistant()
     {
