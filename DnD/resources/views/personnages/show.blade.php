@@ -1,3 +1,7 @@
+<!-- Fichier d'une page d'affichage d'un personnage
+
+@author Pier-Olivier Fontaine et Marc-Antoine Fournier
+  -->
 @extends('layout.master')
 
 @section('content')

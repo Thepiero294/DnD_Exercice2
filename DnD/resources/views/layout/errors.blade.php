@@ -1,3 +1,7 @@
+<!-- Fichier qui affiche les erreurs sur une page
+
+@author Pier-Olivier Fontaine et Marc-Antoine Fournier
+-->
 @if (count($errors))
     <div class="form-group">
         <div class="alert alert-danger">

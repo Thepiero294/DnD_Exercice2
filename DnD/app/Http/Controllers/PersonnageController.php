@@ -6,10 +6,15 @@ use Illuminate\Http\Request;
 use App\Personnage;
 use App\Equipement;
 
+/**
+ * Classe qui définie ce qu'est un PesonnageController
+ * 
+ * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+ */
 class PersonnageController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Retourne les resource
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,7 +25,7 @@ class PersonnageController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Affiche la forme d'une nouvelle création
      *
      * @return \Illuminate\Http\Response
      */
@@ -30,7 +35,7 @@ class PersonnageController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Stocke une nouvelle ressource
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -61,7 +66,7 @@ class PersonnageController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Affiche la ressource spécifiée
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -73,18 +78,7 @@ class PersonnageController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
+     * Met à jour une ressource dans le stockage
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -101,16 +95,5 @@ class PersonnageController extends Controller
 
         $equipement->save();
         return redirect()->route("personnages.show", $id);
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

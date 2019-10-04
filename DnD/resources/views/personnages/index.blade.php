@@ -1,3 +1,7 @@
+<!-- Fichier d'une page d'index
+
+@author Pier-Olivier Fontaine et Marc-Antoine Fournier
+-->
 @extends('layout.master')
 
 @section('content')

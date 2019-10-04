@@ -4,10 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * Classe de migration qui crée une table de personnage
+ * 
+ * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+ */
 class CreatePersonnagesTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Roule les migrations
      *
      * @return void
      */
@@ -27,7 +32,7 @@ class CreatePersonnagesTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Renverse les migrations
      *
      * @return void
      */

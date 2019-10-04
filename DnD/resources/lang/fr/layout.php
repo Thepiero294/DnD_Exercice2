@@ -1,5 +1,8 @@
 <?php
-
+/** Fichier de string utilisés pour les pages web
+ * 
+ * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+ */
 return [
     'title' => 'Donjon & Dragon',
     'nomPerso' => 'Nom : ',

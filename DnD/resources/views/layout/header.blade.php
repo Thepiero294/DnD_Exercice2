@@ -1,3 +1,7 @@
+<!-- Fichier qui affiche le haut de page
+
+@author Pier-Olivier Fontaine et Marc-Antoine Fournier
+-->
 <nav class="navbar navbar-expand-lg">
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav">

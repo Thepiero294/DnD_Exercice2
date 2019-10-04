@@ -4,10 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+/**
+ * Classe de migrations qui crée la table d'équipements dans la base de donnée
+ * 
+ * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+ */
 class CreateEquipementsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Roule les migrations
      *
      * @return void
      */
@@ -23,7 +28,7 @@ class CreateEquipementsTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Renverse les migrations
      *
      * @return void
      */

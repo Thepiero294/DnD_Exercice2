@@ -1,5 +1,8 @@
 <?php
-
+/** Fichier utilisé pour les validations 
+ * 
+ * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+*/
 return [
     'required' => 'Le champ :attribute est requis.',
     'min' => [

@@ -1,3 +1,7 @@
+<!-- Fichier principal éxécutant les autres pages web
+
+@author Pier-Olivier Fontaine et Marc-Antoine Fournier
+-->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
