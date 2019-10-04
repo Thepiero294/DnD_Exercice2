@@ -54,7 +54,7 @@
 
         @foreach ($equipements as $equipement)
                 <li>
-                        {{ $equipement->nom_equipement }}
+                    {{ $equipement->nom_equipement }}
                 </li>
             @endforeach
     </div>

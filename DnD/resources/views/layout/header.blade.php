@@ -6,15 +6,15 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="/">Accueil </a>
+        <a class="nav-link" href="/">{{ __('layout.navBarAccueil') }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/personnages/creer">Création de personnages</a>
+        <a class="nav-link" href="/personnages/creer">{{ __('layout.navBarLien') }}</a>
       </li>
     </ul>
     </div>
     <span class="navbar-text titre">
-      Pier-Olivier Fontaine et Marc-Antoine Fournier
+    {{ __('layout.nomAuteur') }}
     </span>
 
 </nav>

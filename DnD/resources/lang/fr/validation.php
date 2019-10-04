@@ -1,7 +1,8 @@
 <?php
-/** Fichier utilisé pour les validations 
- * 
+/** Fichier utilisé pour les validations
+ *
  * @author Pier-Olivier Fontaine et Marc-Antoine Fournier
+ * @return string Retourne les strings d'erreurs traduit en français
 */
 return [
     'required' => 'Le champ :attribute est requis.',
