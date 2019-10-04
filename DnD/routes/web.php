@@ -15,5 +15,8 @@ Route::get('/', 'PersonnageController@index');
 
 Route::get('/personnages', 'PersonnageController@index');
 Route::get('/personnages/creer', 'PersonnageController@create');
-Route::get('/personnages/{personnage}', 'PersonnageController@show')->name('personnages.show');
+Route::get('/personnages/editer/{personnage}', 'PersonnageController@show')->name('personnages.show');
 Route::post('/personnages', 'PersonnageController@store')->name('personnages.store');
+
+// Pour ajout d'un équipement à un personnage
+Route::post(':/personnages/update/{personnage}', 'PersonnageController@update')->name('personnages.update');

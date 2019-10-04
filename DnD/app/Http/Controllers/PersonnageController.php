@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Personnage;
+use App\Equipement;
 
 class PersonnageController extends Controller
 {
@@ -34,26 +35,26 @@ class PersonnageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $this->validate(request(),
-            ['nomPersonnage' => 'required|min:5|max:100'],
-            ['forcePersonnage' => 'required|numeric|min:3|max:18'],
-            ['dexteritePersonnage' => 'required|numeric|min:3|max:18'],
-            ['constitutionPersonnage' => 'required|numeric|min:3|max:18'],
-            ['intelligencePersonnage' => 'required|numeric|min:3|max:18'],
-            ['sagessePersonnage' => 'required|numeric|min:3|max:18'],
-            ['charismePersonnage' => 'required|numeric|min:3|max:18']
-        );
+        $this->validate(request(),[
+            'nomPerso' => 'required|min:5|max:100',
+            'forcePerso' => 'required|integer|between:3,18',
+            'dexteritePerso' => 'required|integer|between:3,18',
+            'constitutionPerso' => 'required|integer|between:3,18',
+            'intelligencePerso' => 'required|integer|between:3,18',
+            'sagessePerso' => 'required|integer|between:3,18',
+            'charismePerso' => 'required|integer|between:3,18'
+        ]);
 
         Personnage::create([
-            'nom' => request('nomPersonnage'),
-            'force' => request('forcePersonnage'),
-            'dexterite' => request('dexteritePersonnage'),
-            'constitution' => request('constitutionPersonnage'),
-            'intelligence' => request('intelligencePersonnage'),
-            'sagesse' => request('sagessePersonnage'),
-            'charisme' => request('charismePersonnage')
+            'nom' => request('nomPerso'),
+            'force' => request('forcePerso'),
+            'dexterite' => request('dexteritePerso'),
+            'constitution' => request('constitutionPerso'),
+            'intelligence' => request('intelligencePerso'),
+            'sagesse' => request('sagessePerso'),
+            'charisme' => request('charismePerso')
         ]);
         return redirect('/personnages');
 
@@ -90,7 +91,15 @@ class PersonnageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate(request(),[
+            'nomEquipement' => 'required|min:5|max:100',
+        ]);
+
+        Equipement::create([
+            'nom_equipement' => request('nomEquipement'),
+            'personnage_id' => request($id)
+        ]);
+        return redirect('/personnages');
     }
 
     /**
